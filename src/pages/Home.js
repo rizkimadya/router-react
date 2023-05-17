@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Js from "../images/js.png";
 import Reactimg from "../images/react.png";
 import Vue from "../images/vue.jpg";
 import Svelte from "../images/svelte.png";
+import MainLayout from "../layouts/MainLayout";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 	const data = [
@@ -34,19 +34,19 @@ const Home = () => {
 		},
 	];
 	return (
-		<>
-			<Navbar />
+		<MainLayout>
 			<h1 style={{ paddingLeft: "6rem" }}>Home Page</h1>
 			<div style={container}>
 				{data.map(item => (
 					<div key={item.id} style={card}>
-						<img src={item.image} width="100%" height="170px" />
-						<h3>{item.name}</h3>
+						<Link to={`/detail/${item.id}`}>
+							<img src={item.image} width="100%" height="170px" />
+							<h3>{item.name}</h3>
+						</Link>
 					</div>
 				))}
 			</div>
-			<Footer />
-		</>
+		</MainLayout>
 	);
 };
 

@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import MainLayout from "../layouts/MainLayout";
 
 const Contact = () => {
 	return (
-		<>
-			<Navbar />
+		<MainLayout>
 			<div style={{ padding: "0px 6rem" }}>
 				<h1>Ini Halaman Contact</h1>
 				<p>
@@ -21,8 +20,7 @@ const Contact = () => {
 					maiores laudantium ab a vero quo?
 				</p>
 			</div>
-			<Footer/>
-		</>
+		</MainLayout>
 	);
 };
 

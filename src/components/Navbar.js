@@ -1,21 +1,20 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-	const navigate = useNavigate();
 	return (
 		<div style={nav}>
 			<h1>KodeAkademia</h1>
 			<ul style={ul}>
-				<li style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
-					Home
-				</li>
-				<li style={{ cursor: "pointer" }} onClick={() => navigate("/about")}>
-					About
-				</li>
-				<li style={{ cursor: "pointer" }} onClick={() => navigate("/contact")}>
-					Contact
-				</li>
+				<Link style={link} to="/">
+					<li>Home</li>
+				</Link>
+				<Link style={link} to="/about">
+					<li>About</li>
+				</Link>
+				<Link style={link} to="/contact">
+					<li>Contact</li>
+				</Link>
 			</ul>
 		</div>
 	);
@@ -37,4 +36,9 @@ const ul = {
 	display: "flex",
 	justifyContent: "space-between",
 	width: "20%",
+};
+
+const link = {
+	color: "#fff",
+	textDecoration: "none",
 };

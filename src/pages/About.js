@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import MainLayout from "../layouts/MainLayout";
 
 const About = () => {
 	return (
-		<>
-			<Navbar />
+		<MainLayout>
 			<div style={{ padding: "0px 6rem" }}>
 				<h1>Ini Halaman About</h1>
 				<p>
@@ -22,8 +20,7 @@ const About = () => {
 					maiores laudantium ab a vero quo?
 				</p>
 			</div>
-			<Footer />
-		</>
+		</MainLayout>
 	);
 };
 
